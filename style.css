@@ -147,8 +147,6 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 7rem 1em 1rem;
     color: #fff;
 }
@@ -187,19 +185,16 @@ body{
     font-size: 1rem;
 }
 
-.list__services__container{
-    display: flex;
-    margin-top: 2rem;
-    align-self: flex-start;
-}
-
 .list{
+    display: flex;
+    flex-flow: row wrap;
     list-style-type: none;
     padding: 0;
 }
 
 .list__item{
-    padding: .5em 0;
+    width: 50%;
+    padding: .5em 1em;
 }
 
 .list__item a {
@@ -220,7 +215,6 @@ body{
 }
 
 .information__section{
-    align-self: flex-start;
     max-width: 380px;
 }
 
@@ -270,21 +264,13 @@ body{
         justify-content: space-around;
     }
 
-    .list__services__container{
-        flex-flow: row nowrap;
-    }
-
     .social__container{
         flex-direction: column;
     }
-    
-    .foot{
-        align-self: flex-end;
-    }
-
 }
 
 @media screen and (min-width: 1200px){
+
     .section__desc{
         flex-flow: row nowrap;
         align-items: center;
@@ -315,5 +301,11 @@ body{
         text-align: right;
     }
 
+}
+
+@media screen and (max-width: 500px) {
+    .list__item{
+        width: 100%;
+    }
 }
 
